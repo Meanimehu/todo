@@ -1,0 +1,198 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  width: min(100% - 40px, 480px);
+  margin: 0 auto;
+  padding: 64px 0 24px;
+}
+
+.eyebrow {
+  color: #7773dc;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: 38px;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+
+h1 span {
+  color: #7773dc;
+}
+
+.subtitle {
+  color: #777;
+  margin-top: 8px;
+}
+
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin: 32px 0;
+}
+
+.add-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #dedee7;
+  border-radius: 10px;
+  font: inherit;
+  outline: none;
+}
+
+.add-form input:focus {
+  border-color: #7773dc;
+}
+
+.add-form button {
+  border: 0;
+  border-radius: 10px;
+  padding: 0 18px;
+  background: #7773dc;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  font-size: 16px;
+}
+
+.section-heading > span {
+  color: #777;
+  font-size: 13px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 10px;
+  border-bottom: 1px solid #eeeef2;
+}
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.todo-label input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.custom-check {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  border: 1.5px solid #c7c7d4;
+  border-radius: 6px;
+}
+
+.todo-label input:checked + .custom-check {
+  background: #7773dc;
+  border-color: #7773dc;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+.todo-label input:focus-visible + .custom-check {
+  outline: 2px solid #7773dc;
+  outline-offset: 3px;
+}
+
+.todo-text {
+  overflow-wrap: anywhere;
+}
+
+.done .todo-text {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.delete {
+  border: 0;
+  background: transparent;
+  color: #999;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: #d44;
+}
+
+.empty {
+  text-align: center;
+  padding: 42px 10px;
+  border: 1px dashed #dddde8;
+  border-radius: 12px;
+}
+
+.empty-icon {
+  margin: auto;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #efefff;
+  color: #7773dc;
+  font-size: 22px;
+}
+
+.empty h3 {
+  margin-bottom: 6px;
+}
+
+.empty p {
+  color: #888;
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 36px;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
+
+@media (max-width: 420px) {
+  .app {
+    padding-top: 36px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .add-form button {
+    padding: 0 12px;
+  }
+}
