@@ -21,7 +21,8 @@
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "todo_desktop",
-            "authorsUrl": "https://github.com/"
+            "authorsUrl": "https://github.com/",
+            "setupIcon": "assets/todo.ico"
           }
         },
         {
